@@ -1,0 +1,21 @@
+/* ---------------- descendent combinator */
+/* div p span{
+    color:red;
+} */
+
+/* ------------- child combinator */
+
+/* div > p{
+    color: red;
+} */
+
+
+/* ----------- immediate sibling */
+/* p+p{
+    color: red;
+} */
+
+
+p~p{
+    color: red;
+}

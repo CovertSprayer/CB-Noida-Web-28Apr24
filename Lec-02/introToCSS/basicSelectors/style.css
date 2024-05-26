@@ -1,0 +1,41 @@
+/*---------------------- element selectors */
+
+/* h1{
+    color: red;
+    border: 2px solid black;
+}
+
+p{
+    color: blue;
+} */
+
+
+/*-------------------- id selector */
+
+/* #special-para{
+    color: red;
+}
+
+#another-special-para{
+    color: orange;
+} */
+
+/* ------------------ class selector */
+/* .shaktiman{
+    color: aqua;
+} */
+
+/* ---------------- attribute selector */
+
+/* a[href='https://www.google.com']{
+    color: chocolate;
+}
+
+p[id="another-special-para"]{
+    color: pink
+} */
+
+
+*{
+    color: red;
+}
