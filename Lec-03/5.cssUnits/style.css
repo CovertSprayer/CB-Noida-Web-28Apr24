@@ -1,0 +1,27 @@
+*{
+    margin: 0;    
+    padding: 0;
+}
+
+
+.container{
+    border: 2px solid black;
+    height: 100vh;
+    width: 100vw;
+    /* height: 400px;
+    width: 900px; */
+    background-color: orange;
+}
+
+.child{
+    border: 2px solid black;
+    height: 200px;
+    width: 800px;
+    background-color: yellow;
+}
+
+.grand-child{
+    width: 70%;
+    height: 150px;
+    background-color: aqua;
+}

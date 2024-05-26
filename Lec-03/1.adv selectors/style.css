@@ -1,0 +1,70 @@
+/* ------------------  pseudo classes (LVHA) */
+
+a:link{
+    color: aqua;
+}
+
+a:visited{
+    color: green;
+}
+
+a:hover{
+    color: blue;
+}
+
+a:active{
+    color: deeppink;
+}
+
+div{
+    border: 2px solid black;
+}
+
+div:hover{
+    background-color: aquamarine;
+}
+
+div:active{
+    background-color: red;
+}
+
+/* --------------------- */
+
+/* ul li:first-child{
+    color: red;
+}
+
+ul li:last-child{
+    color: green;
+} */
+
+ul li:nth-child(2n){
+    background-color: grey;
+}
+
+ul li:nth-child(2n+1){
+    background-color: rgb(191, 191, 191);
+}
+
+input:focus{
+    background-color: green;
+}
+
+/* ----------- pseudo elements ------------- */
+
+
+p::first-letter{
+    font-size: 3rem;
+}
+
+p::first-line{
+    color: orange;
+}
+
+li::after{
+    content: '💀';
+}
+
+li::before{
+    content: '❌';
+}

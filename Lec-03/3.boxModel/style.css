@@ -1,0 +1,19 @@
+p{
+    /* padding-left: 20px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 100px; */
+
+    padding: 30px 100px;
+
+    border: 4px solid black;
+    margin: 10px;
+    /* width: 200px;
+    height: 200px; */
+}
+
+/* span{
+    border: 2px solid red;
+    width: 800px;
+    height: 500px;
+} */

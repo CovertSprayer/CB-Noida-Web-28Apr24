@@ -15,7 +15,7 @@
     color: red;
 } */
 
-
+/* ------------ general sibling */
 p~p{
     color: red;
 }
