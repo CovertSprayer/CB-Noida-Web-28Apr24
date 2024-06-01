@@ -1,0 +1,33 @@
+.parent{
+    background-color: aquamarine;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.container{
+    background-color: orange;
+    padding: 30px;
+    position: relative;
+    /* z-index: 0;   */
+}
+
+.child{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    margin-bottom: 4px;
+}
+
+.child-1{
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    z-index: 1;
+}
+.child-2{
+    position: relative;
+    left: 100px;
+    top: 0px;
+    z-index: 0;
+}
