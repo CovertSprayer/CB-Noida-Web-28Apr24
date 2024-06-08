@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.card{
+    width: 330px;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid white;
+
+}
+
+.card-header{
+    /* border: 2px solid red; */
+    height: 250px;
+    /* object-fit: contain; */
+    position: relative;
+    
+}
+
+.card-header span{
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    background-color: blue;
+    color: white;
+}
+
+.card-header img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* border: 2px solid red; */
+    margin-top: 6px;
+}
+
+.card-content .title, .cuisines{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cuisines, .card-content > p{
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.card-content h1{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.card-content > p{
+    text-align: right;
+}
+
+.card:hover{
+    /* border: 2px solid rgb(187, 187, 187); */
+    box-shadow: 1px 1px 20px rgb(206, 206, 206);
+}
+
+.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* border: 2px solid red; */
+    justify-content: center;   
+}
