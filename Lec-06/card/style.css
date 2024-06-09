@@ -15,7 +15,6 @@ body{
     padding: 12px;
     border-radius: 20px;
     border: 2px solid white;
-
 }
 
 .card-header{
@@ -45,7 +44,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 6px;
-    /* border: 2px solid red; */
     margin-top: 6px;
 }
 
@@ -77,7 +75,9 @@ body{
 
 .container{
     display: flex;
-    /* flex-wrap: wrap; */
-    /* border: 2px solid red; */
+    flex-wrap: wrap;
+    border: 2px solid red;
     justify-content: center;   
+    max-width: 1200px;
+    margin: 0 auto;
 }

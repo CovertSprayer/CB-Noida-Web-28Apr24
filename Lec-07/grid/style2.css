@@ -1,0 +1,43 @@
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: orange;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: 
+        "a1 a1 a1 a2 a3"
+        "a1 a1 a1 a2 a3"
+        "a1 a1 a1 a4 a4"
+        "a5 a5 a5 a5 a5";
+}
+
+.child{ 
+    background-color: aquamarine;
+    border: 2px solid black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child-1{
+    grid-area: a1;
+}
+
+.child-2{
+    grid-area: a2;
+}
+
+.child-3{
+    grid-area: a3;
+}
+
+.child-4{
+    grid-area: a4;
+}
+
+.child-5{
+    grid-area: a5;
+}

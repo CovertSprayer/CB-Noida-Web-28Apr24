@@ -1,0 +1,20 @@
+/* fr -> fraction unit*/
+
+.container{
+    background-color: orange;
+    border: 2px solid black;
+    display: grid;
+    /* grid-template-columns: 1fr 4fr 1fr; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(4, 100px);
+}
+
+.child{ 
+    background-color: aquamarine;
+    border: 2px solid black;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
