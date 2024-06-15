@@ -1,0 +1,18 @@
+.container{
+    border: 2px solid black;
+    width: 900px;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+@media (max-width: 930px){
+    .container{
+        width: 600px;
+    }
+}
+
+@media (max-width: 620px){
+    .container{
+        width: 100%;
+    }
+}
