@@ -1,0 +1,20 @@
+
+.container{
+    margin: 90px auto;
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    transition-duration: 4s;
+}
+
+.container:hover{
+    /* transform: rotateZ(45deg); */
+    /* transform: rotateX(90deg); */
+    /* transform: rotateY(45deg); */
+
+    transform: translateX(200px);
+    /* transform: translateY(-200px); */
+
+    /* transform: scale(1.5); */
+    /* skewX(20deg); */
+}

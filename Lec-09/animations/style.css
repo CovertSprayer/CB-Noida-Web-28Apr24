@@ -1,0 +1,40 @@
+html{
+    font-size: 16px;
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: teal;
+    animation-name: leftToRight;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 2s; */
+}
+
+/* @keyframes leftToRight{
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(400px);
+    }
+} */
+
+@keyframes leftToRight{
+    0%{
+        transform: translate(0);
+        /* color: teal; */
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        transform: translate(400px);
+        background-color: orange;
+    }
+}

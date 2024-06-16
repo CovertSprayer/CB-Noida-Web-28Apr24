@@ -1,0 +1,32 @@
+body{
+    perspective: 1000px;
+}
+
+.container{
+    margin: 80px auto;
+    height: 400px;
+    width: 320px;
+    border: 2px solid black;
+    font-size: 1.8rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 1.5s;
+}
+.side-a, .side-b{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.side-a{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BODI4NDY1NzkyM15BMl5BanBnXkFtZTgwNzM3MDM0OTE@._V1_FMjpg_UX1000_.jpg);
+    background-size: cover;
+}
+.side-b{
+    transform: rotateY(180deg);
+    background-color: antiquewhite;
+    backface-visibility: hidden;
+}
+.container:hover{
+    transform: rotateY(180deg);
+}
