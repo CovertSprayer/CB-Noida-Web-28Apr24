@@ -10,10 +10,10 @@ var data = [
 // calculatedAreas = [20, 16, ...]
 // calculatedPerimeters = [2*20, 2*16, ...]
 
-// function area (l,b){
-//     return l*b;
-// }
-// var perimeter = (l,b) => 2*(l+b);
+function area (l,b){
+    return l*b;
+}
+var perimeter = (l,b) => 2*(l+b);
 
 // for(let rect of data){
 //     // console.log(rect.l, rect.b);
