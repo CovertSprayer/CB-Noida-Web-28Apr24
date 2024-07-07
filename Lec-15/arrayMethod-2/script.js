@@ -68,10 +68,12 @@ const newArr = data.map((student)=>{
     }else{
         newStudent.gender = 'Female'
     }
+    newStudent.courseInrolled.push('Java')
 
     return newStudent;
 })
 
-// console.log(newArr);
+console.log(data);
+console.log(newArr);
 
 
