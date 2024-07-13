@@ -29,6 +29,7 @@ const obj = {
 }
 
 const {a, b, c: {c1, c2}} = obj;
-console.log(a, b, c1, c2)
+console.log(a, b, c1, c2);
+
 
 
