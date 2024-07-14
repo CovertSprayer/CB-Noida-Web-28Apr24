@@ -19,6 +19,7 @@ let person = {
     age: 35,
     getAge: function(){
         console.log(this)
+        // return this.age;
     }
 }
 person.getAge();
@@ -39,6 +40,9 @@ let p2 = {
 function updatePerson(name, age){
     this.name = name;
     this.age = age;
+
+    // window.name = name;
+    // window.age = age;
 }
 
 // data = ['Mohan', 10]
@@ -48,6 +52,10 @@ updatePerson.call(p2, 'Mohan', 10);
 // updatePerson.apply(p2, data);
 // updatePerson.call(p2, ...data);
 
+let newUpdatePerson = updatePerson.bind(p1);
+newUpdatePerson('temp', 26);
+
+console.log(p1)
 
 
 
