@@ -1,5 +1,3 @@
-
-
 console.log(Array.prototype);
 
 Object.prototype.sayHi = function(){
@@ -29,5 +27,8 @@ arr.sayHi();
 arr.pop();
 console.log(arr);
 
+let nums = [1,2,3,5];
 
-
+nums.myMap((num, ind, arr)=>{
+    console.log(num, ind, arr)
+})
