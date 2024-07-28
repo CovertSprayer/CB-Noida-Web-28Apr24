@@ -29,6 +29,21 @@ specialFruit.classList.remove('two');
 console.log("has class ->", specialFruit.classList.contains('ten'));
 
 
+console.log(specialFruit.parentElement);
+// console.log(specialFruit.parentElement.children);
+
+// console.log(specialFruit.parentElement.nextElementSibling);
+console.log(specialFruit.parentElement.previousElementSibling);
+
+const newHeading = document.createElement('h1');
+console.log(newHeading)
+newHeading.innerText = 'This is some heading';
+newHeading.classList.add('nine');
+newHeading.setAttribute('id', 'new-heading');
+
+document.querySelector('body').appendChild(newHeading);
+
+document.querySelector('img').before(newHeading);
 
 
 
