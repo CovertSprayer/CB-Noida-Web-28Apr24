@@ -34,6 +34,22 @@ function uploadFile(file){
    })
 }
 
+downloadFile()
+    .then((file)=>{
+        console.log('file downloaded successfully!', file)
+        return compressFile(file);
+    })
+    .then((compressedFile)=>{
+        console.log('File compressed successfully!', compressedFile);
+        return uploadFile(compressedFile);
+    })
+    .then((finalLink)=>{
+        console.log(finalLink)
+    })
+    .catch((err)=>{
+        console.log(err);
+    })
+
 // http://facebook.com/downloads/photo.png
 
 // downloadFile(function(file){
@@ -64,21 +80,7 @@ function uploadFile(file){
 //         console.log(err);
 //     })
 
-downloadFile()
-    .then((file)=>{
-        console.log('file downloaded successfully!', file)
-        return compressFile(file);
-    })
-    .then((compressedFile)=>{
-        console.log('File compressed successfully!', compressedFile);
-        return uploadFile(compressedFile);
-    })
-    .then((finalLink)=>{
-        console.log(finalLink)
-    })
-    .catch((err)=>{
-        console.log(err);
-    })
+
 
 
 
