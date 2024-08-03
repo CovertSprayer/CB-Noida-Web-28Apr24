@@ -28,3 +28,29 @@ button.addEventListener('click', function(){
 button.addEventListener('click', function(){
     console.log('clicked 2')
 })
+
+// even handler
+
+const h1 = document.querySelector('h1');
+
+h1.addEventListener('mouseenter', ()=>{
+    h1.style.border = '2px solid black'
+    const text = h1.innerText;
+    h1.innerText = text.toLowerCase();
+})
+
+h1.addEventListener('mouseleave', (e)=>{
+    console.log(e)
+    console.log(e.target)
+    h1.style.border = ''
+    const text = h1.innerText;
+    h1.innerText = text.toUpperCase();
+})
+
+document.addEventListener('mousemove', ()=>{
+    console.log('Dont move your mouse')
+})
+
+
+
+
