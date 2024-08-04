@@ -4,6 +4,11 @@ const todoList = document.querySelector('.todo-list');
 input.addEventListener('keydown', (e) => {
     if(e.key == 'Enter'){
         const text = e.target.value;
+
+        if(text == '') {
+            alert('Write something!');
+            return;
+        }
         e.target.value = '';
 
         const todo = createTodo(text);
@@ -30,6 +35,10 @@ todoList.addEventListener('click', e => {
         const prevTodo = currentTodo.previousElementSibling;
 
         if(prevTodo) prevTodo.before(currentTodo);
+    }
+
+    else if(element.classList.contains('checkbox')){
+        element.nextElementSibling.classList.toggle('completed');
     }
 })
 
