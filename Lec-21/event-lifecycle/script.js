@@ -7,9 +7,11 @@ parent.addEventListener('click', (e)=>{
 }, false)
 
 child.addEventListener('click', (e)=>{
+    e.stopPropagation();
     console.log('Child Element')
-}, true)
+}, false)
 
 grandChild.addEventListener('click', (e)=>{
+    e.stopPropagation();
     console.log('Grand Child Element')
 }, false)
