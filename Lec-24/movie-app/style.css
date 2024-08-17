@@ -73,12 +73,17 @@ main{
         div{
             display: flex;
             gap: 4px;
+            overflow-x: scroll;
 
             article{
                 img{
-                    width: 250px;
+                    width: 180px;
                 }
             }
+        }
+
+        div::-webkit-scrollbar {
+            display: none;
         }
     }
 }
