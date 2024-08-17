@@ -7,25 +7,78 @@
     box-sizing: border-box;
 }
 
-body, a{
+body{
     font-family: "Poppins", system-ui;
+    background-color: #171717;
+}
+
+a{
+    font-family: "Poppins", system-ui;
+    text-decoration: none;
+    color: white;
 }
 
 nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     height: 4.2rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 40px;
+    color: white;
+    transition: all 400ms;
 
     div.left{
-        border: 2px solid green;
         display: flex;
         align-items: center;
         gap: 14px;
         img{
             width: 120px;
+        }
+    }
+
+    div.right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+header{
+    /* border: 2px solid green; */
+    height: 100vh;
+    background:linear-gradient(rgb(255, 255, 255, 0), #171717), url('https://images.unsplash.com/photo-1723403804231-f4e9b515fe9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+}
+
+main{
+    /* border: 4px solid orange; */
+    position: relative;
+    top: -150px;
+    margin-left: 40px;
+    /* margin: -12rem 0; */
+
+    section{
+        margin-bottom: 20px;
+
+        h2{
+            font-weight: 500;
+            color: white;
+        }
+
+        div{
+            display: flex;
+            gap: 4px;
+
+            article{
+                img{
+                    width: 250px;
+                }
+            }
         }
     }
 }
