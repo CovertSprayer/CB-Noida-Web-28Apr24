@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todos</h1>
+
+    <a href="/todos/new">Add todo</a>
+    <ul>
+        <% for( let todo of todos ) { %>
+            <li>
+                <span><%= todo.task %></span>
+                <a href="/todos/<%= todo.id %>">Show</a>
+                <a href="/todos/<%= todo.id %>/edit">Edit</a>
+                <!-- <a href="/todos/<%= todo.id %>">Delete</a> -->
+                 <form action="/todos/<%= todo.id %>?_method=DELETE" method="POST">
+                    <button>Delete</button>
+                 </form>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>
