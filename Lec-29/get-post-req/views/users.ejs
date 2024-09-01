@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    <a href="/user-form">Add User</a>
+
+    <div>
+        <% for( let user of users ) { %>
+            <div style="border: 2px solid black; margin-bottom: 10px">
+                <p>Name: <%= user.username %></p>
+                <p>Email: <%= user.email %></p>
+                <p>Age: <%= user.age %></p>
+            </div>
+        <% } %>
+
+    </div>
+</body>
+</html>
