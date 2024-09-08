@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "1",
+        "username": "rohit_sharma",
+        "age": 30,
+        "address": {
+            "street": 2,
+            "city": "NJ",
+            "country": "USA"
+        }
+    },
+    {
+        "_id": "2",
+        "username": "rohit_sharma",
+        "age": 30,
+        "address": {
+            "street": 2,
+            "city": "NJ",
+            "country": "USA"
+        }
+    }
+]
