@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row">
+    <div class="col col-6 mx-auto">
+        <form>
+            <div class="mb-3">
+                <label for="username-inp" class="form-label">Username</label>
+                <input name="username" type="text" class="form-control" id="username-inp" aria-describedby="emailHelp">
+              </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+
+          <br>
+          <p>
+            Haven't signed up?
+            <a href="/signup">Signup</a>
+          </p>
+    </div>
+</div>
