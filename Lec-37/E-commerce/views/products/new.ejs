@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row">
+    <div class="col-6 mx-auto">
+        <form method="post" action="/products">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Product Title</label>
+              <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <label for="priceInp" class="form-label">Price</label>
+            <div class="col-auto mb-3">
+                <div class="input-group">
+                  <div class="input-group-text">$</div>
+                  <input name="price" type="text" class="form-control" id="priceInp">
+                </div>
+            </div>
+            <div class="mb-3">
+              <label for="imageInp" class="form-label">Image Link</label>
+              <input name="image" type="text" class="form-control" id="imageInp">
+            </div>
+            <div class="mb-3">
+              <label for="descInp" class="form-label">Description</label>
+              <textarea name="description" class="form-control" id="descInp"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-sm btn-primary">Add Product</button>
+          </form>
+    </div>
+</div>
