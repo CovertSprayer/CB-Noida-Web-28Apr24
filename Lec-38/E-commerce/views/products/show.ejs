@@ -1,0 +1,73 @@
+<% layout('layouts/boilerplate') -%>
+
+<%- include('../partials/flash') %>
+
+    <div class="row mt-4">
+        <div class="col- col-lg-6">
+            <div class="card mx-auto" style="width: 20rem;">
+                <img src="<%= product.image %>" height="210px" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= product.title %></h5>
+                  <p class="card-text"><%= product.description %></p>
+                  <a href="#" class="btn btn-sm btn-primary">Buy Now</a>
+                  <form class="d-inline" action="/cartItems/<%= product._id %>/add" method="post">
+                    <button class="btn btn-sm btn-success">Add to Cart</button>
+                  </form>
+
+                  <% if (user && user.role == 'buyer') { %>
+                    <!-- <form class="d-inline" method="post" action="/cartItems">
+                        <input class="d-none" type="text" name="productId" value="<%= product._id %>">
+                        <button class="btn btn-sm btn-success">Add to Cart</button>
+                      </form> -->
+                    
+                    <% } else if (user && user.role == 'seller') { %>
+                         <!-- <a href="#" class="btn btn-sm btn-success">Add to Cart</a> -->
+                          <!-- <form method="post" action="/cart">
+                            <input type="text" name="productId" value="<%= product._id %>">
+                            <button>Add to Cart</button>
+                          </form> -->
+                        <form class="d-inline" action="/products/<%= product._id %>?_method=DELETE" method="post">
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                        <a href="/products/<%= product._id %>/edit" class="btn btn-sm btn-secondary">Edit</a>
+                  <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-6">
+            <h2 class="display-5">Reviews</h2>
+            <form class="w-50" action="/products/<%= product._id %>/reviews" method="POST">
+                <fieldset class="starability-basic">
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="rating" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="rating" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="rating" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="rating" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="rating" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                </fieldset>
+                <textarea class="form-control" name="comment"></textarea>
+                <button class="btn btn-sm btn-success mt-3">Add Comment</button>
+            </form>
+
+
+            <div class="w-50">
+                <% for( let review of product.reviews ) { %>
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            <p class="starability-result" data-rating="<%= review.rating %>"></p>
+                        </div>
+                        <div class="card-body">
+                          <!-- <h5 class="card-title">Special title treatment</h5> -->
+                          <p class="card-text"><%= review.comment %></p>
+                          <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                      </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
