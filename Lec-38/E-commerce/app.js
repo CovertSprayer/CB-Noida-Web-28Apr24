@@ -75,10 +75,13 @@ const reviewRoutes = require('./routes/review.routes');
 const authRoutes = require('./routes/auth.routes');
 const cartRoutes = require('./routes/cart.routes');
 
+const wishListAPI = require('./routes/api/wishlist.routes')
+
 app.use(productRoutes);
 app.use(reviewRoutes);
 app.use(authRoutes);
 app.use(cartRoutes);
+app.use(wishListAPI);
 
 app.get('*', (req, res) => {
   res.render('404')

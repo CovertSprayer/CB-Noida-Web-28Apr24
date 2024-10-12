@@ -9,7 +9,14 @@
         <div class="card" style="width: 18rem;">
           <img src="<%= product.image %>" height="210px" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title"><%= product.title %></h5>
+            <h5 class="card-title d-flex justify-content-between">
+              <span><%= product.title %></span>
+              <% if (user && user.wishList.includes(product._id)) { %>
+                <i productId="<%= product._id %>" class="text-danger fa-heart fa-solid btn btn like-btn"></i>
+              <% } else { %>
+                  <i productId="<%= product._id %>" class="text-danger fa-heart fa-regular btn btn like-btn"></i>
+              <% } %>
+            </h5>
             <h6>$ <%= product.price %></h6>
             <p class="card-text"><%= product.description %></p>
             <a href="/products/<%= product._id %>" class="btn btn-sm btn-primary">Show</a>
@@ -17,3 +24,5 @@
         </div>
       <% } %>
     </div>
+
+  <script src="/js/wishList.js"></script>

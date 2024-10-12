@@ -1,5 +1,12 @@
 
 module.exports.isLoggedIn = (req, res, next) => {
+    if(req.xhr && !req.isAuthenticated()){
+        res.status(401).json({
+            success: false,
+            message: 'Unauthorized user!'
+        })
+    }
+    
     if(!req.isAuthenticated()){
         req.flash('error', 'Please Login!')
         res.redirect('/login');
